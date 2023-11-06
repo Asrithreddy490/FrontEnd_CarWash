@@ -1,0 +1,14 @@
+body {
+    background-image: url('../images/forwash.jpg'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0; /* Remove default margin to avoid spacing around the page */
+  }
+  
+  /* ViewUserDetails.css */
+.container {
+    background-color: rgba(255, 255, 255, 0.8); /* Add an opaque white background */
+    padding: 20px; /* Add some padding to separate content from the background */
+  }
+  

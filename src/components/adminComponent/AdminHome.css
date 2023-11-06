@@ -1,0 +1,14 @@
+/* AdminHome.css */
+.adminImage {
+  background-image: url('../images/forwash.jpg');
+   
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  }
+  

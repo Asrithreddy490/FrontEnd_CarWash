@@ -1,0 +1,39 @@
+/* AddUserComponent.css */
+
+.page-container {
+  /* background: linear-gradient(90deg, #f5f5f5 50%, #ffffff 50%); */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  opacity: 0.7; /* Adjust the opacity value to your preference (0.0 to 1.0) */
+  background-repeat: no-repeat; /* Prevent the background image from tiling */
+}
+
+.form-container {
+  background: rgba(245, 245, 245, 0.9); /* Use rgba to set opacity (0.0 to 1.0) */
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  background-repeat: no-repeat; /* Prevent the background image from tiling */
+}
+
+.submit-button-container {
+  margin-top: 20px;
+}
+
+.bg{
+  background-color: coral;
+}
+/* .bg {
+  background-image: url('../images/img-2.jpg');
+  /* background-repeat: no-repeat; Prevent the background image from tiling */
+  /* background-size: cover; Cover the entire container */
+  /* background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+} */ 

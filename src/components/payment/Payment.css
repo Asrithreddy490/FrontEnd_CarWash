@@ -1,0 +1,28 @@
+.error {
+    color: red;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .loading {
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+  }
+  button {
+    background-color: #34bf49;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .amount-pay{
+    margin-top: 150px;
+    font-size: larger;
+    background-color: #34bf49;
+    width: 20%;
+  }
+   

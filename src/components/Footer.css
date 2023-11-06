@@ -1,0 +1,28 @@
+/* Footer.css */
+footer {
+  background-color: #222;
+  color: #fff;
+  padding: 20px 0;
+  margin-top: 25px; /* Added margin to the top */
+}
+
+footer h3 {
+  font-size: 24px;
+  color: #FFD700; /* Golden color for heading */
+}
+
+footer p {
+  font-size: 16px;
+}
+
+/* Contact Information Styling */
+footer address {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Copyright Text Styling */
+footer .mt-2 {
+  font-size: 12px;
+  color: #888;
+}

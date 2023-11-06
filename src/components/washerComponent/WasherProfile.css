@@ -1,0 +1,13 @@
+/* WasherProfile.css or your custom CSS file */
+.card-hover {
+    transition: transform 0.2s;
+  }
+  
+  .card-hover:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+  
+  .lavender-bg {
+    background-color: lavender; /* You can adjust the color value as needed */
+  }

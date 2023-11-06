@@ -1,0 +1,88 @@
+/* Reset some default styles
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  
+  /* Header styles with more spacing */
+  .header {
+    padding: 20px 0; /* Increase padding at the top and bottom of the header */
+    background-color: #222;
+  }
+  
+  /* Ensure the form elements are stacked vertically */
+  .form {
+    display: flex;
+    flex-direction: column; /* Display children in a column layout */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(50vh - 20px); /* Reduce the height to half of the viewport height and add space at the top and bottom */
+    background-color: #333;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 10px; /* Reduced space below the title */
+  }
+  
+  .form-group {
+    margin-bottom: 10px; /* Reduced space between form groups */
+  }
+  
+  .label {
+    text-align: left;
+  }
+  
+  /* Decrease the width of the form controls to make the form smaller */
+  .form-control {
+    width: 100%; /* Increase the width to 100% to expand the form control */
+    padding: 5px;
+    margin: 3px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  /* Create a separate style for buttons to align them */
+  .button-container {
+    display: flex;
+    justify-content: center; /* Center-align the buttons horizontally */
+    align-items: center; /* Center-align the buttons vertically */
+    margin-top: 15px; /* Add space between the buttons and form controls */
+  }
+  
+  /* Add more margin to buttons to separate them */
+ .button-container button {
+  margin: 0 10px; /* Add space between the buttons */
+  width: 150px; /* Set a specific width for the buttons */
+}
+  .forgot-password {
+    text-align: right;
+    margin-top: 5px; /* Reduced space above the "Not Registered?" link */
+  }
+  
+  /* Style the warning message in red */
+  .warning {
+    color: red;
+  }
+  
+  /* Footer styles with more spacing */
+  .footer {
+    padding: 20px 0; /* Increase padding at the top and bottom of the footer */
+    background-color: #222;
+    text-align: center; /* Center-align the content in the footer */
+  }
+  .bgimage{
+    background-image: url('../images/ijee-car-wash-home-service.jpg');
+    background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  }
+  
