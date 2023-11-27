@@ -92,7 +92,7 @@ const AddWashPacktoUser = () => {
                 </div>
 
               
-                <div className="form-group mb-2">
+                {/* <div className="form-group mb-2">
                   <label htmlFor="washPackId">Selected WashPack ID:</label>
                   <input
                     type="text"
@@ -102,7 +102,7 @@ const AddWashPacktoUser = () => {
                     className="form-control"
                     readOnly
                   />
-                </div> 
+                </div>  */}
                 
 
                 <div className="form-group mb-2">
@@ -115,7 +115,7 @@ const AddWashPacktoUser = () => {
                     className="form-control"
                     required
                   >
-                    <option value="-1">- SELECT -</option>
+                    <option >- SELECT -</option>
                     {washpacks.map((washpack) => (
                       <option key={washpack.id} value={washpack.id}>
                         {washpack.washPackName} - ₹{washpack.washPackCost}
@@ -124,7 +124,7 @@ const AddWashPacktoUser = () => {
                   </select>
                 </div>
 
-                <button className="btn btn-success" onClick={(e) => AddWashPack(e)}>Submit</button>
+                <button className="btn btn-success" onClick={AddWashPack}>Submit</button>
               </form>
             </div>
           </div>

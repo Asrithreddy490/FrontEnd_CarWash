@@ -40,7 +40,7 @@ video {
   margin: 6px;
   border-color: azure;
   color: #fff;
-  background-color: red;
+  background-color: rgb(108, 28, 28);
 }
 
 .fa-play-circle {

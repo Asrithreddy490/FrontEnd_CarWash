@@ -16,7 +16,7 @@ const WasherProfile = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [id]);
 
   return (
     <div>
@@ -46,7 +46,11 @@ const WasherProfile = () => {
           >
             <div className="card-body">
               <h5 className="card-title">{washer.washPackName}</h5>
+              <h5 className="card-title">{washer.id}</h5>
               <p className="card-text">{washer.washPackDescription}</p>
+              <Link to={`/userForWasher/${washer.id}/${washer.washPackName}`}>
+                <button>View User</button>
+              </Link>
             </div>
           </div>
         ))}

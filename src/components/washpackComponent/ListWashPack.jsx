@@ -30,13 +30,15 @@ const ListWashPack = () => {
     "Truck and SUV Wash Pack": Carwash7,
     "Express Wash Pack": CarWash8,
     "Only Wash Pack": Carwash9,
-    "ultra clean":Carwash7,
+    "ultra clean": Carwash7,
+    
   };
 
   useEffect(() => {
     WashPackService.getAllWashPacks()
       .then((Response) => {
         setWashPacks(Response.data);
+        console.log(Response.data)
       })
       .catch((error) => {
         console.error('Error fetching Wash Packs:', error);
@@ -70,7 +72,7 @@ const ListWashPack = () => {
           })
           .catch((error) => {
             console.error('Error deleting Wash Pack:', error);
-  
+
             // Show an error alert
             Swal.fire({
               title: 'Error',
@@ -81,7 +83,7 @@ const ListWashPack = () => {
       }
     });
   };
-  
+
 
   const buttonStyle = {
     fontSize: '16px',
@@ -125,21 +127,31 @@ const ListWashPack = () => {
                     e.currentTarget.style.boxShadow = '0 4px 8px 0 rgba(0, 0, 0, 0.2)';
                     e.currentTarget.style.borderColor = '#ccc';
                   }
-                }>
+                  }>
                   <img src={carPhoto} className='card-img-top' />
                   <div className='card-body'>
                     <h5 className='card-title'>{washpack.washPackName}</h5>
                     <p className='card-text'>{washpack.washPackDescription}</p>
                     <p className='card-cost'>Cost: {washpack.washPackCost}</p>
+                    {washpack.washerId ? (
+      <p className='card-cost' style={{ fontWeight: 'bold', color: 'green' }}>Washer: Assigned</p>
+    ) : (
+      <p className='card-cost' style={{ fontWeight: 'bold', color: 'red' }}>Washer: Not Assigned Yet</p>
+    )}
                     <Link to={`/updateWashpack/${washpack.id}`}>
                       <Button variant="contained" color="info" startIcon={<EditIcon />} sx={buttonStyle}>
                         Update
                       </Button>
                     </Link>
                     <Link to={`/addWasherToWashpack/${washpack.id}`}>
-                      <Button variant="contained" color="success" startIcon={<AddWasherIcon />} sx={buttonStyle}>
-                        Add Washer
-                      </Button>
+                    <Button
+        variant="contained"
+        color={washpack.washerId ? "success" : "warning"} // Different colors for "Change Washer" and "Assign Washer"
+        startIcon={<AddWasherIcon />}
+        sx={buttonStyle}
+      >
+        {washpack.washerId ? 'Change Washer' : 'Assign Washer'}
+      </Button>
                     </Link>
                     <Button
                       variant="contained"

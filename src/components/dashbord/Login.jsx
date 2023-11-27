@@ -96,14 +96,14 @@ const Login = () => {
           </h3>
 
           <div className="form-group">
-            <label className='label'>Mobile/Email</label>
+            <label className='label'>Email</label>
             <input
               type="text"
               className="form-control"
-              placeholder="Enter Mobile/Email"
+              placeholder="Enter Email"
               name="username"
               autoComplete="off"
-              {...register("username", { required: 'Email / Phone is required', validate: customEmailValidation })}
+              {...register("username", { required: 'Email is required', validate: customEmailValidation })}
               onChange={(e) => setUsername(e.target.value)}
               required
             />

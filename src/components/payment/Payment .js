@@ -16,6 +16,9 @@ const Payment = () => {
 
   const location = useLocation();
   const totalPrice = location.state ? location.state.totalPrice : 1000;
+  // const [totalPrice,setTotalPrice]=useState(localStorage.getItem('totalPrice')||"");
+  
+
 
   const createOrder = async () => {
     try {
@@ -25,7 +28,7 @@ const Payment = () => {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-        },
+        }, 
       });
 
       if (response.status === 200) {
@@ -120,4 +123,5 @@ const handlePayment = async () => {
 };
 
 export default Payment;
+
 

@@ -36,7 +36,7 @@ const ViewUserDetails = () => {
                 <strong>Address:</strong> {user.address}
               </p>
               <p className="card-text">
-                <strong>Wash Pack Name:</strong> {user.washerName}
+                <strong>Wash Pack Name:</strong> {user.washPackName}
               </p>
               <p className="card-text">
                 <strong>Description:</strong> {user.washPackDescription}
@@ -45,7 +45,7 @@ const ViewUserDetails = () => {
                 <strong>Wash Pack Cost:</strong> {user.washPackCost}
               </p>
               <p className="card-text">
-                <strong>Assigned Washer:</strong> {user.washPackName }
+                <strong>Assigned Washer:</strong> {user.washerName }
               </p>
             </div>
           ) : (

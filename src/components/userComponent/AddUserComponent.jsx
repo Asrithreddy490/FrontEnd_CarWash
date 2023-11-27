@@ -78,8 +78,8 @@ const AddUserComponent = () => {
         });
     } else {
       UserService.createUser(users)
-        .then((Response) => {
-          console.log(Response.data);
+        .then((response) => {
+          console.log(response.data);
           Swal.fire({
             icon: 'success',
             title: 'User Added',
@@ -90,11 +90,19 @@ const AddUserComponent = () => {
         .catch((error) => {
           console.log(error.response.status);
           console.log(error.response.data);
-          Swal.fire({
-            icon: 'error',
-            title: 'Error',
-            text: 'An error occurred while adding the user.',
-          });
+          if (error.response && error.response.status === 400) {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'User with this email or phone number already exists.',
+            });
+          } else {
+            Swal.fire({
+              icon: 'error',
+              title: 'Error',
+              text: 'An error occurred while adding the user.',
+            });
+          }
         });
     }
   };
@@ -169,7 +177,7 @@ const AddUserComponent = () => {
         />
         <TextField
           label="Password"
-          type="text"
+          type="password"
           variant="outlined"
           fullWidth
           margin="normal"

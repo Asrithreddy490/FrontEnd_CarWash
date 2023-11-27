@@ -44,6 +44,7 @@ const WasherDetails = () => {
             <tr>
               <th>Washer Name</th>
               <th>Washer Email</th>
+              <th>Password</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -51,6 +52,8 @@ const WasherDetails = () => {
             <tr>
               <td>{washer.washerName}</td>
               <td>{washer.washerEmail}</td>
+              <td>{washer.washerPassword}</td>
+            
               <td>
                 <Link to={`/updateWasher/${washer.id}`}>
                   <Button variant="contained" color="info" startIcon={<EditIcon />}>

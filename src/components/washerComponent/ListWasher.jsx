@@ -96,7 +96,7 @@ const ListWasher = () => {
           }).map((washer) => (
             <tr key={washer.id}>
               <td>{washer.id}</td>
-              <td>{washer.washerName}</td>
+              <td>{washer.washerName}</td> 
               <td>{washer.washerEmail}</td>
               <td>
                 

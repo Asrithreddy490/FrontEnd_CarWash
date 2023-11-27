@@ -37,7 +37,7 @@ function WasherDashboard(props) {
       <Container>
         <div style={{ marginTop: '20px' }}>
           <div className="d-flex justify-content-between" style={{ marginBottom: '20px' }}>
-            <h2>Washer ID: {props.data || 'N/A'}</h2>
+          <h3 className="text-dark">Washer Dashboard</h3>
             <IconButton color="primary" onClick={handleLogout}>
               <ExitToAppIcon />LOGOUT
             </IconButton>

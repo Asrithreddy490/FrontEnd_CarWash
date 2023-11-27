@@ -149,7 +149,7 @@ const AddWasherComponent = () => {
         />
         <TextField
           label="Password"
-          type="text"
+          type="password"
           variant="outlined"
           fullWidth
           margin="normal"

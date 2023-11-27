@@ -12,14 +12,13 @@ const GetWashPackById = () => {
 
   useEffect(() => {
     UserService.getUserFromAdmin(id)
-      .then((Response) => {
-        setWashpacks(Response.data);
-        console.log(Response.data);
+      .then((response) => {
+        setWashpacks(response.data);
+        console.log(response.data);
       })
       .catch((error) => {
         console.log(error);
       });
-
   }, []);
 
   return (
@@ -52,24 +51,30 @@ const GetWashPackById = () => {
       <Card
         variant="outlined"
         style={{
-          maxWidth: '400px', // Set a maximum width for the card
-          backgroundColor: '#f5f5f5', // Background color (change to your preferred color)
-          border: '1px solid #ccc', // Border
-          borderRadius: '8px', // Border radius
-          boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)', // Box shadow
+          maxWidth: '400px',
+          backgroundColor: '#f5f5f5',
+          border: '1px solid #ccc',
+          borderRadius: '8px',
+          boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2)',
         }}
       >
         <CardContent>
           <h2 style={{ color: '#333' }}>Wash Pack Details</h2>
-          <div>
-            <strong>Wash Pack Name:</strong> {washpacks.washPackName}
-          </div>
-          <div>
-            <strong>Description:</strong> {washpacks.washPackDescription}
-          </div>
-          <div>
-            <strong>Cost:</strong> {washpacks.washPackCost}
-          </div>
+          {washpacks.length === 0 ? (
+            <div>No data found</div>
+          ) : (
+            <>
+              <div>
+                <strong>Wash Pack Name:</strong> {washpacks.washPackName}
+              </div>
+              <div>
+                <strong>Description:</strong> {washpacks.washPackDescription}
+              </div>
+              <div>
+                <strong>AMOUNT:</strong> {washpacks.washPackCost} /-
+              </div>
+            </>
+          )}
         </CardContent>
       </Card>
     </div>

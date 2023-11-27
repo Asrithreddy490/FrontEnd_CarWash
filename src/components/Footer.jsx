@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-6">
-              <h3>On Demand Car Wash</h3>
+              <h3>Reddy Carwash</h3>
               <p>Can Repair or wash any car</p>
             </div>
             <div className="col-md-6">
@@ -15,8 +15,8 @@ const Footer = () => {
                 <strong>Reddy Car Wash</strong><br />
                 123 Main Street<br />
                 Bangalore, India<br />
-                Phone: (123) 456-7890<br />
-                Email: Reddy_Car_Wash@example.com
+                Phone: +1-123-456-7890<br />
+                Email: info@carwash.com
               </address>
             </div>
           </div>

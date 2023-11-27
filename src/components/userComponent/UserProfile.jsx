@@ -44,7 +44,7 @@ const UserProfile = () => {
       </Button>
       {user ? (
         <Paper className="p-4" style={tableContainerStyle}>
-          <Table className="table table-striped table-bordered">
+          <Table className="table table-striped table-bordered"> 
             <TableHead>
               <TableRow>
                 <TableCell>ID</TableCell>
@@ -74,9 +74,9 @@ const UserProfile = () => {
           </Table>
         </Paper>
       ) : (
-        <Typography variant="h6">Loading...</Typography>
+        <Typography variant="h6">data not found...</Typography>
       )}
-      <Link className="btn btn-info" to={`/addWashPackToUser/${user ? user.id : ''}`}>Add Washpack</Link>
+      {/* <Link className="btn btn-info" to={`/addWashPackToUser/${user ? user.id : ''}`}>Add Washpack</Link> */}
     </div>
   );
 }

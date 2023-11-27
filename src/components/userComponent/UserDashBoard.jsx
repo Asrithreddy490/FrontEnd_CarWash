@@ -27,9 +27,8 @@ function UserDashboard(props) {
   return (
     <div>
       <div className="col main pt-5 mt-3">
-        {/* ... Your existing content ... */}
-        <hr />
-        <h2>User ID: {props.data}</h2> 
+        <h3>User DashBoard</h3>
+        
       </div>
       <div style={{ position: 'absolute', top: '80px', right: '20px' }}>
         <IconButton onClick={handleLogout}>
@@ -67,7 +66,7 @@ function UserDashboard(props) {
         </div>
         
       </div>
-      <ListWashPackForUser/>
+      <ListWashPackForUser userId={props.data} />
     </div>
   );
 }

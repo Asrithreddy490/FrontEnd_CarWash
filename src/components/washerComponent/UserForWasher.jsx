@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import UserService from '../../services/UserService';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const UserForWasher = () => {
-  const { id } = useParams(); // Retrieve the washPackId from the URL parameters
-  const [user, setUser] = useState({
-    userName: '',
-    phoneNumber: '',
-    emailId: '',
-  });
+  const { id, washPackName } = useParams();
+  const [users, setUsers] = useState([]);
 
   useEffect(() => {
     UserService.getUserFromWashPackId(id)
       .then((response) => {
-        setUser(response.data);
+        setUsers(response.data);
         console.log(response.data);
       })
       .catch((error) => {
@@ -22,23 +19,33 @@ const UserForWasher = () => {
   }, [id]);
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>User Name</th>
-            <th>Phone number</th>
-            <th>email</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{user.userName}</td>
-            <td>{user.phoneNumber}</td>
-            <td>{user.emailId}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="container mt-5">
+      <div className="d-flex justify-content-between align-items-center mb-3">
+        <h2>{washPackName} - List of Users</h2>
+       
+      </div>
+      {Array.isArray(users) && users.length > 0 ? (
+        <table className="table table-striped">
+          <thead>
+            <tr>
+              <th>User Name</th>
+              <th>Phone number</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody>
+            {users.map((user) => (
+              <tr key={user.id}>
+                <td>{user.userName}</td>
+                <td>{user.phoneNumber}</td>
+                <td>{user.emailId}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      ) : (
+        <p>No users found.</p>
+      )}
     </div>
   );
 };

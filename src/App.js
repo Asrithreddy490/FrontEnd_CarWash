@@ -29,6 +29,7 @@ import Layout from './Layout';
 import AddWasherToWashpack from './components/washpackComponent/AddWasherToWashpack';
 import WasherDetails from './components/washerComponent/WasherDetails';
 import Payment from './components/payment/Payment ';
+import UserForWasher from './components/washerComponent/UserForWasher';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
  
       <div className='container'>
         <Routes>
+          {/* http://localhost:3000/ */}
 
           {/* //----------------------dashboard routes-------------------------------------\\ */}
           <Route path="/" element={<Layout>{<Home/>}</Layout>} exact/>
@@ -72,7 +74,8 @@ function App() {
           <Route path="/washerDetails/:id" element={<Layout><WasherDetails/></Layout>} exact/>
           <Route path="/addWasher" element={<Layout><AddWasherComponent/></Layout>} exact/>
           <Route path="/listWasher" element={<Layout><ListWasher/></Layout>} exact/>
-          <Route path="updateWasher/:id" element={<Layout><AddWasherComponent/></Layout>} exact/>
+          <Route path="/updateWasher/:id" element={<Layout><AddWasherComponent/></Layout>} exact/>
+          <Route path="/userForWasher/:id/:washPackName" element={<Layout><UserForWasher/></Layout>} exact/>
           {/* //----------------------washer routes-------------------------------------\\ */}
 
 
