@@ -177,7 +177,7 @@ const AddUserComponent = () => {
         />
         <TextField
           label="Password"
-          type="password"
+          type='password'
           variant="outlined"
           fullWidth
           margin="normal"
